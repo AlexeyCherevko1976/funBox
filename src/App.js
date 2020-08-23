@@ -1,10 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import Packet from './components/Packet'
+
+
 
 function App() {
   return (
     <div className="App">
+        <Packet />
+        <Packet />
+        <Packet />
+    </div>
+  );
+/*    <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,8 +29,8 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
-  );
+    </div>*/
+  
 }
 
-export default App;
+export default App
