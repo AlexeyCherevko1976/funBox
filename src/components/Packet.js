@@ -10,7 +10,8 @@ class Packet extends React.Component{
 			background: '#ffffff',
 			width: '325px',
 			height: '475px',
-			padding: '30px'
+			margin: '30px'
+			// border: '4px solid black'
 		};
 		return (
 		<div style={packets}>
