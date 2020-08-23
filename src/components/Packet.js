@@ -8,14 +8,16 @@ class Packet extends React.Component{
 	render(){
 		const packets={
 			background: '#ffffff',
-			width: '325px',
-			height: '475px',
+			//background-image: 'url(kat3.png)',
+			width: '311px',
+			height: '470px',
 			margin: '30px'
 			// border: '4px solid black'
 		};
 		return (
 		<div style={packets}>
 			<h1>Hello is compos !</h1>
+			
 		</div>
 			)
 		
