@@ -9,16 +9,27 @@ import articles from '../fixtures'
 function Packet(props){
 	
 	let arr=articles[0]["articles"];
-	
+	function analiz(nameId){
+		if (arr[arr.length-1].length==1){
+			//return arr[arr.length-1][0] //если адрес уже найден, то он уже внесен в конце массива
+		}
+		for(let i=0; i<arr.length; i++){
+			if(arr[i].id==nameId){
+				arr.push([i])
+			 return i}
+		}
+		return arr.length-1  // возврат "нулевого массива" стоящего в конце (если данного id нет в списке)
+	}
+	//;
 	return (
 	<div className="Packet">
 		<div className="Packet-data">
-			<h2>c {arr[props.id].meat}</h2>
+			<h2>c {arr[analiz(props.id)].meat}</h2>
 			<div className="Packet-dataInsert" />
 			<div className="Packet-dataWeight">				
-				<p>{arr[props.id].numberPortion} порций</p>
-				<p>{arr[props.id].mouseText}</p>
-				<p>{arr[props.id].komment}</p>
+				<p>{arr[analiz(props.id)].numberPortion} порций</p>
+				<p>{arr[analiz(props.id)].mouseText}</p>
+				<p>{arr[analiz(props.id)].komment}</p>
 			</div>
 		</div>
 		
