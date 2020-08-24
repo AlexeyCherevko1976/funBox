@@ -1,8 +1,22 @@
 .Packet{
-	
-	background: #000000;
-	width: 325px;
-	height: 475px;
-	text-align: center;
-	padding-left: 30px;
+	background: url(./kat3.png) #ffffff repeat center;
+	width: 311px;
+	height: 470px;
+	margin: 30px;
+}
+.Packet-data{
+	position: relative; /* позиционирование */
+    bottom: -80px; /* Положение от нижнего края */
+    left: 49px; /* Положение от левого края */
+    line-height: 6px;
+    
+}
+.Packet-dataInsert{
+	height: 0px;
+}
+.Packet-dataWeight{
+	width: 150px;
+	height: auto;
+	word-wrap: break-word;
+	line-height: 8px; /* пробел меж*/
 }

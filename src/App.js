@@ -3,15 +3,15 @@ import ReactDOM from 'react-dom';
 import logo from './logo.svg';
 import './App.css'
 import Packet from './components/Packet'
-
+import articles from './fixtures'
 
 
 function App() {
   return (
     <div className="App">
-        <Packet />
-        <Packet />
-        <Packet />
+        <Packet id="0" />
+        <Packet id="1" />
+        <Packet id="2" />
         
     </div>
   );
