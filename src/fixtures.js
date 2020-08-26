@@ -10,7 +10,8 @@ export default [
       "mouseText":"мышь в подарок",
       "komment":"",
       "weight":"0,5",
-      "cyrcleColor":"#1798d9"
+      "cyrcleColor":"#1798d9",
+      "select":["Чего сидишь? Порадуй кота, купи", "Свежайшая фуа-гра с нежнейшим вкусом", "Печалька, с фуа-грой закончился"]
     },
     {
       "id": "1",
@@ -19,7 +20,8 @@ export default [
       "mouseText":"2 мыши в подарок",
       "komment":"",
       "weight":"2",
-      "cyrcleColor":"#da1668"
+      "cyrcleColor":"#da1668",
+      "select":["Чего сидишь? Порадуй кота, купи", "Головы щучьи с чесноком да свежайшая семгушка", "Печалька, с рыбой закончился"]
     },
     {
       "id": "2",
@@ -28,7 +30,8 @@ export default [
       "mouseText":"5 мышей в подарок",
       "komment":"заказчик доволен",
       "weight":"5",
-      "cyrcleColor":"#b3b3b3"
+      "cyrcleColor":"#b3b3b3",
+      "select":["Чего сидишь? Порадуй кота, купи", "Отличная и нежная курочка!", "Печалька, с курой закончится"]
     },
     {
       "id": "",
@@ -37,7 +40,8 @@ export default [
       "mouseText":"",
       "komment":"",
       "weight":"",
-      "cyrcleColor":""
+      "cyrcleColor":"",
+      "select":["", "", ""]
     }
   ]
   }]

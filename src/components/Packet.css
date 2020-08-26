@@ -4,6 +4,7 @@
 	width: 311px;
 	height: 470px;
 	margin: 30px;
+	text-align: left;
 }
 .Packet-data{
 	position: relative; /* позиционирование */
