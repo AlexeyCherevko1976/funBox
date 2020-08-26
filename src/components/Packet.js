@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import './Packet.css'
 import articles from '../fixtures'
+import Cyrcle from './Cyrcle'
 
 //import './components/Packet.css'
 // K-11-4 2
@@ -24,15 +25,18 @@ function Packet(props){
 	return (
 	<div className="Packet">
 		<div className="Packet-data">
-			<h2>c {arr[analiz(props.id)].meat}</h2>
+			<div>
+				<h2>c {arr[analiz(props.id)].meat}</h2>
+			</div>
 			<div className="Packet-dataInsert" />
 			<div className="Packet-dataWeight">				
 				<p>{arr[analiz(props.id)].numberPortion} порций</p>
 				<p>{arr[analiz(props.id)].mouseText}</p>
 				<p>{arr[analiz(props.id)].komment}</p>
+				
 			</div>
 		</div>
-		
+	<Cyrcle cyrcle={arr[analiz(props.id)].weight} cyrcleColor={arr[analiz(props.id)].cyrcleColor} />	
 	</div>
 		)	
 }

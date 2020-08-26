@@ -1,5 +1,6 @@
 .Packet{
-	background: url(./kat3.png) #ffffff repeat center;
+	position: relative;
+	background: url(./kat3.png) repeat center;
 	width: 311px;
 	height: 470px;
 	margin: 30px;
@@ -8,7 +9,7 @@
 	position: relative; /* позиционирование */
     bottom: -80px; /* Положение от нижнего края */
     left: 49px; /* Положение от левого края */
-    line-height: 6px;
+    line-height: 6px; /* пробел между строчками*/
     
 }
 .Packet-dataInsert{

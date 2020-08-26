@@ -9,7 +9,8 @@ export default [
       "numberPortion":"10",
       "mouseText":"мышь в подарок",
       "komment":"",
-      "weight":"0,5"
+      "weight":"0,5",
+      "cyrcleColor":"#1798d9"
     },
     {
       "id": "1",
@@ -17,7 +18,8 @@ export default [
       "numberPortion":"40",
       "mouseText":"2 мыши в подарок",
       "komment":"",
-      "weight":"2"
+      "weight":"2",
+      "cyrcleColor":"#da1668"
     },
     {
       "id": "2",
@@ -25,7 +27,8 @@ export default [
       "numberPortion":"100",
       "mouseText":"5 мышей в подарок",
       "komment":"заказчик доволен",
-      "weight":"10"
+      "weight":"5",
+      "cyrcleColor":"#b3b3b3"
     },
     {
       "id": "",
@@ -33,7 +36,8 @@ export default [
       "numberPortion":"",
       "mouseText":"",
       "komment":"",
-      "weight":""
+      "weight":"",
+      "cyrcleColor":""
     }
   ]
   }]
