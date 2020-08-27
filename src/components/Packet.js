@@ -12,13 +12,13 @@ import Cyrcle from './Cyrcle'
 class Packet extends React.Component{
 	constructor(props){
 	super(props);
-
+	this.state={arr: articles[0]["articles"]};
 	}
 	
 
 	//;
 	render(){
-	let arr=articles[0]["articles"];
+	let arr=this.state.arr;
 	function analiz(nameId){
 		if (arr[arr.length-1].length==1){
 			//return arr[arr.length-1][0] //если адрес уже найден, то он уже внесен в конце массива
