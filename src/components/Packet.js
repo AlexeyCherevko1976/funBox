@@ -7,8 +7,17 @@ import Cyrcle from './Cyrcle'
 
 //import './components/Packet.css'
 // K-11-4 2
-function Packet(props){
+//function Packet(props){
+//K-11-7
+class Packet extends React.Component{
+	constructor(props){
+	super(props);
+
+	}
 	
+
+	//;
+	render(){
 	let arr=articles[0]["articles"];
 	function analiz(nameId){
 		if (arr[arr.length-1].length==1){
@@ -21,49 +30,26 @@ function Packet(props){
 		}
 		return arr.length-1  // возврат "нулевого массива" стоящего в конце (если данного id нет в списке)
 	}
-	//;
+
 	return (
 	<div className="Packet">
 		<div className="Packet-data">
 			<div>
-				<h2>c {arr[analiz(props.id)].meat}</h2>
+				<h2>c {arr[analiz(this.props.id)].meat}</h2>
 			</div>
 			<div className="Packet-dataInsert" />
 			<div className="Packet-dataWeight">				
-				<p>{arr[analiz(props.id)].numberPortion} порций</p>
-				<p>{arr[analiz(props.id)].mouseText}</p>
-				<p>{arr[analiz(props.id)].komment}</p>
+				<p>{arr[analiz(this.props.id)].numberPortion} порций</p>
+				<p>{arr[analiz(this.props.id)].mouseText}</p>
+				<p>{arr[analiz(this.props.id)].komment}</p>
 				
 			</div>
 		</div>
-	<Cyrcle cyrcle={arr[analiz(props.id)].weight} cyrcleColor={arr[analiz(props.id)].cyrcleColor} />	
+	<Cyrcle cyrcle={arr[analiz(this.props.id)].weight} cyrcleColor={arr[analiz(this.props.id)].cyrcleColor} />	
 	</div>
-		)	
+
+		)
+		}	
 }
-/*
-class Packet extends React.Component{
-	constructor(props){
-		super(props);
-		const {article}=props
-	}
-	render(){
-		return (
-		<div className="Packet">
-			<div className="Packet-data">
-				<h2>c {props.text}</h2>
-				<div className="Packet-dataInsert" />
-				<div className="Packet-dataWeight">				
-					<p>10 порций</p>
-					<p>мышь в подарок</p>
-					<p>заказчик доволен</p>
-				</div>
-			</div>
-			
-		</div>
-			)
-		
-	}
-}
-*/
-// K-9-15 2
+
 export default Packet
