@@ -1,10 +1,10 @@
 .Cyrcle{
-	/*background: #0000ff;*/
+	background: #0000ff;
 	width: 80px;
 	height: 80px;
 	position: absolute; /* позиционирование */
     bottom: 10px; /* Положение от нижнего края */
-    left: 220px; /* Положение от левого края */
+    left: 220px; /*220 Положение от левого края */
     border-radius: 40px;
 }
 .Cyrcle-title{

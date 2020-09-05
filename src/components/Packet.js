@@ -10,42 +10,48 @@ import Cyrcle from './Cyrcle'
 //function Packet(props){
 //K-11-7
 class Packet extends React.Component{
-	constructor(props){
+constructor(props){
 	super(props);
-	this.state={arr: articles[0]["articles"]};
-	}
-	
+	const {meat}=this.props;
+	//console.log(articles[0]["articles"][meat]);
 
+	this.state={data: articles[0]["articles"][meat],
+		arr: [5, 8, 9], error: null,
+	  isLoaded: false,
+	  items: []};
+	console.log(this.state.data);
+}
+
+	
+  componentDidMount() {
+	//let arr=articles[0]["articles"];
+	//this.setState.arr=[4,5,7];
+
+	}
+
+	
 	//;
 	render(){
-	let arr=this.state.arr;
-	function analiz(nameId){
-		if (arr[arr.length-1].length==1){
-			//return arr[arr.length-1][0] //если адрес уже найден, то он уже внесен в конце массива
-		}
-		for(let i=0; i<arr.length; i++){
-			if(arr[i].id==nameId){
-				arr.push([i])
-			 return i}
-		}
-		return arr.length-1  // возврат "нулевого массива" стоящего в конце (если данного id нет в списке)
-	}
+
+
 
 	return (
 	<div className="Packet">
+	
 		<div className="Packet-data">
-			<div>
-				<h2>c {arr[analiz(this.props.id)].meat}</h2>
+		<div>
+				<h2>c {this.state.data.meat} </h2>
 			</div>
 			<div className="Packet-dataInsert" />
 			<div className="Packet-dataWeight">				
-				<p>{arr[analiz(this.props.id)].numberPortion} порций</p>
-				<p>{arr[analiz(this.props.id)].mouseText}</p>
-				<p>{arr[analiz(this.props.id)].komment}</p>
+				<p>{this.state.data.numberPortion} порций</p>
+				<p>{this.state.data.mouseText}</p>
+				<p>{this.state.data.komment}</p>
 				
 			</div>
 		</div>
-	<Cyrcle cyrcle={arr[analiz(this.props.id)].weight} cyrcleColor={arr[analiz(this.props.id)].cyrcleColor} />	
+	<Cyrcle cyrcle={this.state.data.weight} cyrcleColor={this.state.data.cyrcleColor} />	
+
 	</div>
 
 		)
@@ -53,3 +59,20 @@ class Packet extends React.Component{
 }
 
 export default Packet
+
+/*			<div>
+				<h2>c {this.state.data.meat} </h2>
+			</div>
+			<div className="Packet-dataInsert" />
+			<div className="Packet-dataWeight">				
+				<p>{this.state.data.numberPortion} порций</p>
+				<p>{this.state.data.mouseText}</p>
+				<p>{this.state.data.komment}</p>
+				
+			</div>
+
+	<Cyrcle cyrcle={this.state.data.weight} cyrcleColor={this.state.data.cyrcleColor} />	
+
+
+
+			*/
