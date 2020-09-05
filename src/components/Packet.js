@@ -13,12 +13,13 @@ class Packet extends React.Component{
 constructor(props){
 	super(props);
 	const {meat}=this.props;
+	const {exist}=this.props;
+	const opacity=exist ? 1 : 0.5;
+	const stylePacket={opacity: opacity} 
 	//console.log(articles[0]["articles"][meat]);
 
 	this.state={data: articles[0]["articles"][meat],
-		arr: [5, 8, 9], error: null,
-	  isLoaded: false,
-	  items: []};
+		exist: exist, stylePacket: stylePacket};
 	console.log(this.state.data);
 }
 
@@ -36,7 +37,7 @@ constructor(props){
 
 
 	return (
-	<div className="Packet">
+	<div className="Packet" style={this.state.stylePacket}>
 	
 		<div className="Packet-data">
 		<div>

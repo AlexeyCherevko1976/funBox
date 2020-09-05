@@ -14,12 +14,12 @@ render(){
   return (
   <div>
     <div className="App-header">
-        Ты сегодня покормил кота?
+        Ты сегодня покормил кота? 
     </div>
     <div className="App-kats">
-        <Packet meat="foieGras"/>
-        <Packet meat="fish"/>
-        <Packet meat="cheecken"/>
+        <Packet meat="foieGras" exist={true} />
+        <Packet meat="fish" exist={true} />
+        <Packet meat="cheecken" exist={false} />
         
     </div>
   </div>
@@ -32,3 +32,5 @@ render(){
 
 
 export default App
+     /*   <Packet meat="fish"/>
+        <Packet meat="cheecken"/>*/
