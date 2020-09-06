@@ -6,8 +6,12 @@
 
 .App-header {
   display: flex;
+  display: -ms-flexbox;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -ms-flex-align: center;
   align-items: center;
+  -ms-flex-pack: justify;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
@@ -15,7 +19,10 @@
 
 .App-kats {
   display: flex;
+  display: -ms-flexbox;
+  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
+  -ms-flex-pack: justify;
   justify-content: center;
   /*align-items: center;*/
   text-align: center;

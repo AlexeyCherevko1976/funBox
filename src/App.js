@@ -9,7 +9,7 @@ import Packet from './components/Packet'
 class App extends React.Component{
 
 
-render(){
+render(){   
 
   return (
   <div>
@@ -22,6 +22,7 @@ render(){
         <Packet meat="cheecken" exist={false} />
         
     </div>
+
   </div>
   );
 }

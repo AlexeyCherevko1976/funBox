@@ -15,12 +15,12 @@ constructor(props){
 	const {meat}=this.props;
 	const {exist}=this.props;
 	const opacity=exist ? 1 : 0.5;
-	const stylePacket={opacity: opacity} 
+	const stylePacket={opacity: opacity, border: "0px solid black"} 
 	//console.log(articles[0]["articles"][meat]);
 
 	this.state={data: articles[0]["articles"][meat],
 		exist: exist, stylePacket: stylePacket,
-		isClick: true};
+		isClick: false};
 	this.handleClick=handleClick.bind(this); //16-40
 	//console.log(this.state.data);
 }
@@ -39,11 +39,11 @@ constructor(props){
 
 
 	return (
-	<div className="Packet" style={this.state.stylePacket} onClick={this.handleClick}>
+	<div className="Packet" style={this.state.exist ? this.state.stylePacket : {opacity: 0.5, border: "0px solid black"}} onClick={this.handleClick} >
 	
 		<div className="Packet-data">
 		<div>
-				<h2>c {this.state.isClick ? this.state.data.meat : '444'} </h2>
+				<h2>c {this.state.data.meat} </h2>
 			</div>
 			<div className="Packet-dataInsert" />
 			<div className="Packet-dataWeight">				
@@ -61,13 +61,19 @@ constructor(props){
 		}	
 }
 
-function handleClick(){
+function handleClick(e){
+	e.preventDefault();
+	let stylePacketIs={opacity: 1, border: "4px solid red"} 
+	let stylePacketNot={opacity: 1, border: "0px solid red"} 
+
 	this.setState({
-		isClick: !this.state.isClick
+		isClick: !this.state.isClick,
+		stylePacket: this.state.isClick ? stylePacketIs : stylePacketNot
 	})
 	console.log("----","click");
 
 }
+
 export default Packet
 
 /*			<div>
