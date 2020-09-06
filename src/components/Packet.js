@@ -19,8 +19,10 @@ constructor(props){
 	//console.log(articles[0]["articles"][meat]);
 
 	this.state={data: articles[0]["articles"][meat],
-		exist: exist, stylePacket: stylePacket};
-	console.log(this.state.data);
+		exist: exist, stylePacket: stylePacket,
+		isClick: true};
+	this.handleClick=handleClick.bind(this); //16-40
+	//console.log(this.state.data);
 }
 
 	
@@ -37,11 +39,11 @@ constructor(props){
 
 
 	return (
-	<div className="Packet" style={this.state.stylePacket}>
+	<div className="Packet" style={this.state.stylePacket} onClick={this.handleClick}>
 	
 		<div className="Packet-data">
 		<div>
-				<h2>c {this.state.data.meat} </h2>
+				<h2>c {this.state.isClick ? this.state.data.meat : '444'} </h2>
 			</div>
 			<div className="Packet-dataInsert" />
 			<div className="Packet-dataWeight">				
@@ -59,6 +61,13 @@ constructor(props){
 		}	
 }
 
+function handleClick(){
+	this.setState({
+		isClick: !this.state.isClick
+	})
+	console.log("----","click");
+
+}
 export default Packet
 
 /*			<div>
